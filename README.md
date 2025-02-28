@@ -66,7 +66,7 @@ Basic usage:
 
 ## Output
 
-The output bag file will be created in the `output` directory in the current directory. The bag file will be named after the folder containing the images (e.g., if your images are in a folder named "thermal_dataset", the bag file will be named "output/thermal_dataset.mcap").
+The output bag file will be created in the `output` directory in the current directory. The bag file will be named after the folder containing the images, followed by the frame rate as an integer (e.g., if your images are in a folder named "thermal_dataset" with a frame rate of 15.0 Hz, the bag file will be named "output/thermal_dataset_15hz.mcap").
 
 The bag file will contain the images as ROS2 sensor_msgs/Image messages, published at the specified frame rate on the specified topic.
 
@@ -80,7 +80,7 @@ The tool uses Docker to:
 4. Save the ROS2 bag file to the output directory
 5. Automatically remove the container after conversion is completed
 
-The output bag file will be named after the folder containing the images. For example, if your images are in a folder named "thermal_dataset", the bag file will be named "thermal_dataset.mcap".
+The output bag file will be named after the folder containing the images and the specified frame rate (rounded to an integer). For example, if your images are in a folder named "thermal_dataset" and you set the frame rate to 15.5 Hz, the bag file will be named "thermal_dataset_15hz.mcap".
 
 ## Notes
 
